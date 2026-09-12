@@ -496,7 +496,7 @@ export default function App() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto p-4 sm:p-6">
+      <div className="w-full p-4 sm:p-6">
         <Header
           selectedSlug={selectedSlug}
           view={view}

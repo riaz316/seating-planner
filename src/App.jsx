@@ -481,7 +481,7 @@ export default function App() {
         .sp-notes { width: 100%; }
         @media (min-width: 640px) {
           .sp-gridwrap { margin-right: 20vw; }
-          .sp-grid { width: calc(75% - 8px); flex: none; }
+          .sp-grid { width: 50vw; flex: none; }
           .sp-notes { width: auto; flex: 1 1 0%; min-width: 0; }
           .sp-sidebar {
             width: 20vw;

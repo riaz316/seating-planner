@@ -83,7 +83,7 @@ export default function Grid({
                       onDragOver={(e) => e.preventDefault()}
                       onDrop={(e) => onSeatDrop(e, d.id, idx)}
                       onClick={() => onSeatClick(d.id, idx, tool)}
-                      className={`flex-1 flex flex-col items-center justify-center text-center border-r last:border-r-0 border-slate-200 px-0.5 py-0.5 min-h-[54px] ${
+                      className={`flex-1 flex flex-col items-center justify-center text-center border-r last:border-r-0 border-slate-200 px-0.5 py-0.5 min-h-[68px] ${
                         view === "teacher" ? "cursor-pointer hover:bg-slate-50" : ""
                       }`}
                     >
@@ -93,7 +93,7 @@ export default function Grid({
                           onDragStart={(e) => onSeatDragStart(e, d.id, idx, student.id)}
                           className="flex flex-col items-center justify-center w-full h-full cursor-grab"
                         >
-                          <span className="text-xs leading-tight line-clamp-2">{displayName(student.name)}</span>
+                          <span className="text-[15px] leading-tight line-clamp-2">{displayName(student.name)}</span>
                           {view === "teacher" && (
                             <div className="flex flex-col gap-0.5 mt-1">
                               <div className="flex gap-1">
@@ -102,14 +102,14 @@ export default function Grid({
                                     e.stopPropagation();
                                     onToggle1(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${DOT_COLOURS[student.status.s1]}`}
+                                  className={`w-2.5 h-2.5 rounded-full ${DOT_COLOURS[student.status.s1]}`}
                                 />
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     onToggle2(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${
+                                  className={`w-2.5 h-2.5 rounded-full ${
                                     student.status.s2 ? DOT_COLOURS[student.status.s2] : BLANK_DOT
                                   }`}
                                 />
@@ -118,7 +118,7 @@ export default function Grid({
                                     e.stopPropagation();
                                     onToggle3(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${
+                                  className={`w-2.5 h-2.5 rounded-full ${
                                     student.status.s3 ? DOT_COLOURS[student.status.s3] : BLANK_DOT
                                   }`}
                                 />
@@ -129,7 +129,7 @@ export default function Grid({
                                     e.stopPropagation();
                                     onToggle4(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${
+                                  className={`w-2.5 h-2.5 rounded-full ${
                                     student.status.s4 ? DOT_COLOURS[student.status.s4] : BLANK_DOT
                                   }`}
                                 />
@@ -138,7 +138,7 @@ export default function Grid({
                                     e.stopPropagation();
                                     onToggle5(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${
+                                  className={`w-2.5 h-2.5 rounded-full ${
                                     student.status.s5 ? DOT_COLOURS[student.status.s5] : BLANK_DOT
                                   }`}
                                 />
@@ -147,7 +147,7 @@ export default function Grid({
                                     e.stopPropagation();
                                     onToggle6(student.id);
                                   }}
-                                  className={`w-2 h-2 rounded-full ${
+                                  className={`w-2.5 h-2.5 rounded-full ${
                                     student.status.s6 ? DOT_COLOURS[student.status.s6] : BLANK_DOT
                                   }`}
                                 />
@@ -156,7 +156,7 @@ export default function Grid({
                           )}
                         </div>
                       ) : (
-                        <span className="text-slate-300 text-xs">empty</span>
+                        <span className="text-slate-300 text-[15px]">empty</span>
                       )}
                     </div>
                   );

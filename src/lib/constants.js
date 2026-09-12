@@ -1,4 +1,4 @@
-export const CELL = 56;
+export const CELL = 70;
 
 export const DESK_SEATS = { single: 1, double: 2, triple: 3 };
 export const DESK_LABELS = { single: "Single", double: "Double", triple: "Triple" };

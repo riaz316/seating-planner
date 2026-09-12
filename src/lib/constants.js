@@ -15,6 +15,9 @@ export const DOT_COLOURS = {
   purple: "bg-purple-500",
   orange: "bg-orange-500",
   yellow: "bg-yellow-500",
+  lac: "bg-blue-600",
+  eal: "bg-pink-600",
+  pp: "bg-neutral-900",
 };
 export const BLANK_DOT = "bg-white border border-slate-300";
 
@@ -24,6 +27,9 @@ export const LEGEND = [
   { colour: "purple", label: "Grade leapers" },
   { colour: "orange", label: "SAF" },
   { colour: "yellow", label: "SEND" },
+  { colour: "lac", label: "LAC" },
+  { colour: "eal", label: "EAL" },
+  { colour: "pp", label: "PP" },
 ];
 
 export const DEFAULT_GRID_ROWS = 14;

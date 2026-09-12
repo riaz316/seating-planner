@@ -15,6 +15,9 @@ export default function SeatModal({
   onToggle1,
   onToggle2,
   onToggle3,
+  onToggle4,
+  onToggle5,
+  onToggle6,
 }) {
   if (!activeSeat) return null;
 
@@ -29,7 +32,15 @@ export default function SeatModal({
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <DotRow student={activeOccupant} onToggle1={onToggle1} onToggle2={onToggle2} onToggle3={onToggle3} />
+            <DotRow
+              student={activeOccupant}
+              onToggle1={onToggle1}
+              onToggle2={onToggle2}
+              onToggle3={onToggle3}
+              onToggle4={onToggle4}
+              onToggle5={onToggle5}
+              onToggle6={onToggle6}
+            />
             <button
               onClick={onRemoveFromSeat}
               className="w-full mt-3 px-3 py-1.5 rounded-md border border-slate-300 text-sm font-medium hover:bg-slate-100"

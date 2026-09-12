@@ -13,7 +13,9 @@ export default function Header({
 }) {
   return (
     <div className="mb-4">
-      <h1 className="text-xl font-bold text-slate-900 mb-2">Classroom Seating Planner</h1>
+      <h1 className="text-xl font-bold text-slate-900 mb-2">
+        Classroom Seating Planner <span className="text-xs font-normal text-slate-400 align-middle">© M. Riaz</span>
+      </h1>
       <div className="flex flex-wrap items-center gap-2 no-print">
         {selectedSlug && (
           <>

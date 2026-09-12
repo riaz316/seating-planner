@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SendNotes({ sendStudents, updateNote, onNoteFocus, onNoteBlur }) {
   return (
-    <div className="no-print sp-notes flex-shrink-0 bg-white border border-slate-200 rounded-lg p-3 h-fit">
+    <div className="no-print sp-notes bg-white border border-slate-200 rounded-lg p-3 h-fit">
       <div className="text-xs font-semibold text-slate-500 mb-2">SEND support notes ({sendStudents.length})</div>
       {sendStudents.length === 0 ? (
         <div className="text-xs text-slate-300 italic">No students tagged SEND yet</div>

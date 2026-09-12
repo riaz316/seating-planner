@@ -22,6 +22,9 @@ export default function Sidebar({
   onToggle1,
   onToggle2,
   onToggle3,
+  onToggle4,
+  onToggle5,
+  onToggle6,
 }) {
   return (
     <div className="no-print sp-sidebar flex flex-col gap-3">
@@ -168,7 +171,16 @@ export default function Sidebar({
           {unseatedStudents.map((s) => (
             <div key={s.id} className="flex items-center gap-1.5 px-2 py-1 border border-slate-200 rounded-md text-xs bg-slate-50">
               <span className="flex-1 truncate">{s.name}</span>
-              <DotRow student={s} size="w-2 h-2" onToggle1={onToggle1} onToggle2={onToggle2} onToggle3={onToggle3} />
+              <DotRow
+                student={s}
+                size="w-2 h-2"
+                onToggle1={onToggle1}
+                onToggle2={onToggle2}
+                onToggle3={onToggle3}
+                onToggle4={onToggle4}
+                onToggle5={onToggle5}
+                onToggle6={onToggle6}
+              />
               <button onClick={() => onDeleteStudent(s.id)} className="text-slate-300 hover:text-red-500">
                 <X className="w-3 h-3" />
               </button>

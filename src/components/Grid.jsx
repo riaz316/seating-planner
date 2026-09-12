@@ -24,6 +24,9 @@ export default function Grid({
   onToggle1,
   onToggle2,
   onToggle3,
+  onToggle4,
+  onToggle5,
+  onToggle6,
 }) {
   return (
     <div className="sp-grid overflow-auto bg-white border border-slate-200 rounded-lg p-3">
@@ -92,32 +95,63 @@ export default function Grid({
                         >
                           <span className="text-xs leading-tight line-clamp-2">{displayName(student.name)}</span>
                           {view === "teacher" && (
-                            <div className="flex gap-1 mt-1">
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  onToggle1(student.id);
-                                }}
-                                className={`w-2 h-2 rounded-full ${DOT_COLOURS[student.status.s1]}`}
-                              />
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  onToggle2(student.id);
-                                }}
-                                className={`w-2 h-2 rounded-full ${
-                                  student.status.s2 ? DOT_COLOURS[student.status.s2] : BLANK_DOT
-                                }`}
-                              />
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  onToggle3(student.id);
-                                }}
-                                className={`w-2 h-2 rounded-full ${
-                                  student.status.s3 ? DOT_COLOURS[student.status.s3] : BLANK_DOT
-                                }`}
-                              />
+                            <div className="flex flex-col gap-0.5 mt-1">
+                              <div className="flex gap-1">
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle1(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${DOT_COLOURS[student.status.s1]}`}
+                                />
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle2(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${
+                                    student.status.s2 ? DOT_COLOURS[student.status.s2] : BLANK_DOT
+                                  }`}
+                                />
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle3(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${
+                                    student.status.s3 ? DOT_COLOURS[student.status.s3] : BLANK_DOT
+                                  }`}
+                                />
+                              </div>
+                              <div className="flex gap-1">
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle4(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${
+                                    student.status.s4 ? DOT_COLOURS[student.status.s4] : BLANK_DOT
+                                  }`}
+                                />
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle5(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${
+                                    student.status.s5 ? DOT_COLOURS[student.status.s5] : BLANK_DOT
+                                  }`}
+                                />
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onToggle6(student.id);
+                                  }}
+                                  className={`w-2 h-2 rounded-full ${
+                                    student.status.s6 ? DOT_COLOURS[student.status.s6] : BLANK_DOT
+                                  }`}
+                                />
+                              </div>
                             </div>
                           )}
                         </div>

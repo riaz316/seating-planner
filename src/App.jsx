@@ -312,7 +312,7 @@ export default function App() {
       ...names.map((name) => ({
         id: crypto.randomUUID(),
         name,
-        status: { s1: "green", s2: null, s3: null },
+        status: { s1: "green", s2: null, s3: null, s4: null, s5: null, s6: null },
         note: "",
       })),
     ]);
@@ -366,6 +366,24 @@ export default function App() {
     pushHistory();
     setStudents((prev) =>
       prev.map((s) => (s.id === id ? { ...s, status: { ...s.status, s3: s.status.s3 === "yellow" ? null : "yellow" } } : s))
+    );
+  };
+  const toggleDot4 = (id) => {
+    pushHistory();
+    setStudents((prev) =>
+      prev.map((s) => (s.id === id ? { ...s, status: { ...s.status, s4: s.status.s4 === "lac" ? null : "lac" } } : s))
+    );
+  };
+  const toggleDot5 = (id) => {
+    pushHistory();
+    setStudents((prev) =>
+      prev.map((s) => (s.id === id ? { ...s, status: { ...s.status, s5: s.status.s5 === "eal" ? null : "eal" } } : s))
+    );
+  };
+  const toggleDot6 = (id) => {
+    pushHistory();
+    setStudents((prev) =>
+      prev.map((s) => (s.id === id ? { ...s, status: { ...s.status, s6: s.status.s6 === "pp" ? null : "pp" } } : s))
     );
   };
 
@@ -464,7 +482,7 @@ export default function App() {
         @media (min-width: 640px) {
           .sp-gridwrap { margin-right: 20vw; }
           .sp-grid { width: calc(75% - 8px); flex: none; }
-          .sp-notes { width: calc(25% - 8px); flex: none; }
+          .sp-notes { width: auto; flex: 1 1 0%; min-width: 0; }
           .sp-sidebar {
             width: 20vw;
             position: fixed;
@@ -547,6 +565,9 @@ export default function App() {
                 onToggle1={toggleDot1}
                 onToggle2={cycleDot2}
                 onToggle3={toggleDot3}
+                onToggle4={toggleDot4}
+                onToggle5={toggleDot5}
+                onToggle6={toggleDot6}
               />
 
               {view === "teacher" && (
@@ -596,6 +617,9 @@ export default function App() {
                   onToggle1={toggleDot1}
                   onToggle2={cycleDot2}
                   onToggle3={toggleDot3}
+                  onToggle4={toggleDot4}
+                  onToggle5={toggleDot5}
+                  onToggle6={toggleDot6}
                 />
               )}
             </div>
@@ -619,6 +643,9 @@ export default function App() {
         onToggle1={toggleDot1}
         onToggle2={cycleDot2}
         onToggle3={toggleDot3}
+        onToggle4={toggleDot4}
+        onToggle5={toggleDot5}
+        onToggle6={toggleDot6}
       />
 
       <ConfirmModal pendingConfirm={pendingConfirm} onCancel={() => setPendingConfirm(null)} />
